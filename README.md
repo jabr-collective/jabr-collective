@@ -1,2 +1,1 @@
-# jabr-collective.github.io
-we-are-jabr
+# weareJABR.github.io
