@@ -18,9 +18,10 @@
       padding: 20px;
       background-color: cyan;
       flex: 1;
-      height: 400px;
+      /* height: 400px; */
       margin: 0 10px;
       overflow: hidden;
+
     }
 
     .gif {
@@ -28,10 +29,12 @@
       margin-bottom: 10px;
       width: 100%;
 
-      //height: auto;
+      height: auto;
       object-fit: cover;
       overflow: hidden;
     }
+
+/* make a button in a container floating in the middle of the page */
 
     .spin-button {
       background-color: yellow;
