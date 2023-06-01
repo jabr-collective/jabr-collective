@@ -1,0 +1,63 @@
+ body {
+      background-color: whitesmoke;
+      //background-image: url("https://example.com/ugly-background.jpg"); /* Replace with your own ugly background image URL */
+      background-size: cover;
+      background-repeat: repeat;
+      background-position: center;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 90vh;
+    }
+
+    .container div {
+      border: 10px solid hotpink;
+      padding: 20px;
+      background-color: cyan;
+      flex: 1;
+      height: 400px;
+      margin: 0 10px;
+      overflow: hidden;
+    }
+
+    .gif {
+      display: block;
+      margin-bottom: 10px;
+      width: 100%;
+
+      //height: auto;
+      object-fit: cover;
+      overflow: hidden;
+    }
+
+    .spin-button {
+      background-color: yellow;
+      color: purple;
+      font-size: 24px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+ 
+          -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+      margin:0 auto;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%, 50% {
+        opacity: 1;
+      }
+      51%, 100% {
+        opacity: 0.3;
+      }
+    }
+
+    .button-container {
+      margin-top: 0px;
+      text-align: center;
+    }

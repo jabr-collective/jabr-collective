@@ -2,139 +2,29 @@
 <html>
 <head>
   <title>TIMEBANDIT</title>
-  <style>
-    body {
-      background-color: lime;
-      background-image: url("https://example.com/ugly-background.jpg"); /* Replace with your own ugly background image URL */
-      background-size: cover;
-      background-repeat: repeat;
-      background-position: center;
-    }
-
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
-
-    .frame {
-      border: 10px solid hotpink;
-      padding: 20px;
-      background-color: cyan;
-    }
-
-    .gif {
-      display: block;
-      margin-bottom: 10px;
-      width: 100%;
-      max-width: 400px;
-      height: auto;
-    }
-
-    .spin-button {
-      background-color: yellow;
-      color: purple;
-      font-size: 24px;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      animation: blink 1s infinite;
-    }
-
-    @keyframes blink {
-      0%, 50% {
-        opacity: 1;
-      }
-      51%, 100% {
-        opacity: 0;
-      }
-    }
-
-    .button-container {
-      margin-top: 20px;
-    }
-  </style>
+  <link rel="stylesheet" href="img/style.css">
+  <script type="text/javascript" src="img/script.js"></script>
 </head>
 <body>
   <div class="container">
-    <h1>TIMEBANDIT</h1>
-
-    <div class="frame" id="frame">
-      <img id="gif" class="gif" src="" alt="GIF">
+    <div id="frame1">
+      <img class="gif" src="img/flicker.gif" alt="loading...">
     </div>
-
-    <div class="button-container">
-      <button class="spin-button" onclick="spin()">SPIN</button>
+    <div id="frame2">
+      <img class="gif" src="img/flicker.gif" alt="loading...">
     </div>
+    <div id="frame3">
+      <img class="gif" src="img/flicker.gif" alt="loading...">
+    </div>
+  </div>
+
+  <div class="button-container">
+    <button class="spin-button" onclick="spin()">SPIN</button>
   </div>
 
   <!-- Add the laugh track audio files -->
   <audio id="laughTrack" src=""></audio>
 
-  <script>
-    var apiKey = "51n2bls2uFiUfsYaR5l0xobWYv9QNVTx"; // Replace with your own API key
-    var laughTracks = [
-      "https://www.shockwave-sound.com/sound-effects/laugh-sounds/cannedlaugh.mp3",
-      "https://www.shockwave-sound.com/sound-effects/laugh-sounds/laughter-01.mp3",
-      "https://www.shockwave-sound.com/sound-effects/laugh-sounds/laughter-02.mp3",
-      // Add more laugh track URLs here
-    ];
 
-    // Function to search GIFs
-    function searchGif() {
-      // Hide the GIF frame temporarily
-      document.getElementById("frame").style.display = "none";
-
-      // Clear previous search result
-      document.getElementById("gif").src = "";
-
-      // Make a request to GIPHY API
-      var url = "https://api.giphy.com/v1/gifs/random?api_key=" + apiKey + "&tag=fail&type=random";
-
-      fetch(url)
-        .then(function(response) {
-          return response.json();
-        })
-        .then(function(data) {
-          // Process the response
-          var gif = data.data;
-          if (gif) {
-            document.getElementById("gif").src = gif.images.original.url;
-            // Show the GIF frame when the new GIF is ready
-            document.getElementById("frame").style.display = "block";
-          }
-        })
-        .catch(function(error) {
-          console.log("Error:", error);
-        });
-    }
-
-    // Function to generate new GIF on button click
-    function spin() {
-      searchGif();
-      setTimeout(playLaughTrack, 2000); // Delay laugh track playback by 2 seconds
-    }
-
-    // Function to play the laugh track
-    function playLaughTrack() {
-      var audio = document.getElementById("laughTrack");
-      var randomLaughTrackIndex = Math.floor(Math.random() * laughTracks.length);
-      audio.src = laughTracks[randomLaughTrackIndex];
-      audio.play();
-    }
-
-    // Automatically trigger initial search on page load
-    window.onload = function() {
-      searchGif();
-    };
-
-    // Event listener for GIF load completion
-    document.getElementById("gif").addEventListener("ended", function() {
-      playLaughTrack();
-    });
-  </script>
 </body>
 </html>
