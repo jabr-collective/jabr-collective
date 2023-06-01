@@ -1,20 +1,17 @@
 var apiKey = "51n2bls2uFiUfsYaR5l0xobWYv9QNVTx"; // Replace with your own API key
     var laughTracks = [
-      "https://www.shockwave-sound.com/sound-effects/laugh-sounds/cannedlaugh.mp3",
-      //"https://www.shockwave-sound.com/sound-effects/laugh-sounds/laughter-01.mp3",
-      //"https://www.shockwave-sound.com/sound-effects/laugh-sounds/laughter-02.mp3",
+      "https://www.shockwave-sound.com/sound-effects/laugh-sounds/cannedlaugh.mp3"
+      
       // Add more laugh track URLs here
     ];
 
     // Function to search GIFs
     function searchGif(frame1) {
-      // Hide the GIF frame temporarily
-      //document.getElementById(frame1).style.display = "hidden";
+      
 
       // Clear previous search result
       document.getElementById(frame1).querySelector(".gif").src = "img/flicker.gif";
-      //document.getElementById(frame2).querySelector(".gif").src = "img/flicker.gif";
-      //document.getElementById(frame3).querySelector(".gif").src = "img/flicker.gif";
+      
 
       // Make a request to GIPHY API
       var url = "https://api.giphy.com/v1/gifs/random?api_key=" + apiKey + "&tag=fail&type=random";
@@ -33,13 +30,12 @@ var apiKey = "51n2bls2uFiUfsYaR5l0xobWYv9QNVTx"; // Replace with your own API ke
           }
         })
         .catch(function(error) {
-          console.log("Error:", error);
+          console.log("Error frame1:", error);
         });
     }
 
     function searchGif(frame2) {
-      // Hide the GIF frame temporarily
-      //document.getElementById(frame1).style.display = "hidden";
+      
 
       // Clear previous search result
       document.getElementById(frame2).querySelector(".gif").src = "img/flicker.gif";
@@ -62,13 +58,12 @@ var apiKey = "51n2bls2uFiUfsYaR5l0xobWYv9QNVTx"; // Replace with your own API ke
           }
         })
         .catch(function(error) {
-          console.log("Error:", error);
+          console.log("Error frame2:", error);
         });
     }
 
     function searchGif(frame3) {
-      // Hide the GIF frame temporarily
-      //document.getElementById(frame1).style.display = "hidden";
+      
 
       // Clear previous search result
       document.getElementById(frame3).querySelector(".gif").src = "img/flicker.gif";
@@ -91,7 +86,7 @@ var apiKey = "51n2bls2uFiUfsYaR5l0xobWYv9QNVTx"; // Replace with your own API ke
           }
         })
         .catch(function(error) {
-          console.log("Error:", error);
+          console.log("Error frame3:", error);
         });
     }
 
@@ -114,8 +109,8 @@ var apiKey = "51n2bls2uFiUfsYaR5l0xobWYv9QNVTx"; // Replace with your own API ke
     // Automatically trigger initial search on page load
     window.onload = function() {
       searchGif("frame1");
-     // searchGif("frame2");
-     // searchGif("frame3");
+      searchGif("frame2");
+      searchGif("frame3");
     };
 
    /* // Event listener for GIF load completion
