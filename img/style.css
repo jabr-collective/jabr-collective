@@ -4,32 +4,43 @@
       background-size: cover;
       background-repeat: repeat;
       background-position: center;
+      font-family:Monomaniac One, sans-serif;
+
     }
+
+h1 {text-align: center; margin-top:40px; font-size: 50px;}
 
     .container {
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 90vh;
+      height: 60vh;
+      padding:20px;
+
     }
 
     .container div {
-      border: 10px solid hotpink;
-      padding: 20px;
+      border: 0px solid hotpink;
+      margin: 20px;
       background-color: cyan;
       flex: 1;
-      /* height: 400px; */
-      margin: 0 10px;
+       height: 400px; 
+      
       overflow: hidden;
+      text-align: center;
+      display: flex;
+      justify-content: center;
 
     }
 
     .gif {
       display: block;
-      margin-bottom: 10px;
-      width: 100%;
+      margin: auto;
+      min-width: 100%;
+      min-height:100%;
 
-      height: auto;
+
+      
       object-fit: cover;
       overflow: hidden;
     }
@@ -39,7 +50,7 @@
     .spin-button {
       background-color: yellow;
       color: purple;
-      font-size: 24px;
+      font-size: 34px;
       padding: 10px 20px;
       border: none;
       border-radius: 5px;
@@ -49,6 +60,7 @@
   transform: translateY(-50%);
       margin:0 auto;
       animation: blink 1s infinite;
+      font-family:Monomaniac One, sans-serif;
     }
 
     @keyframes blink {
