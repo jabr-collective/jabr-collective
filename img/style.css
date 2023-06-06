@@ -4,11 +4,23 @@
       background-size: cover;
       background-repeat: repeat;
       background-position: center;
-      font-family:Monomaniac One, sans-serif;
+      font-family:"Exo 2", sans-serif;
+      text-transform: uppercase;
+        font-weight: 900;
+          text-shadow: 3px 1px 1px #4af7ff, 2px 2px 1px #165bfb, 4px 2px 1px #4af7ff,
+    3px 3px 1px #165bfb, 5px 3px 1px #4af7ff, 4px 4px 1px #165bfb,
+    6px 4px 1px #4af7ff, 5px 5px 1px #165bfb, 7px 5px 1px #4af7ff,
+    6px 6px 1px #165bfb, 8px 6px 1px #4af7ff, 7px 7px 1px #165bfb,
+    9px 7px 1px #4af7ff;
+      font-size: clamp(3rem, 10vw, 6rem);
 
     }
 
-h1 {text-align: center; margin-top:40px; font-size: 60px;}
+h1 {text-align: center; margin-top:40px; font-size: 100px; margin-bottom:0;
+
+
+
+}
 
     .container {
       display: flex;
@@ -41,15 +53,13 @@ h1 {text-align: center; margin-top:40px; font-size: 60px;}
 
 
       
-      object-fit: cover;
-      overflow: hidden;
     }
 
 /* make a button in a container floating in the middle of the page */
 
     .spin-button {
-      background-color: yellow;
-      color: purple;
+      background-color: #4af7ff;
+      color: #000;
       font-size: 34px;
       padding: 10px 20px;
       border: none;
@@ -60,7 +70,8 @@ h1 {text-align: center; margin-top:40px; font-size: 60px;}
   transform: translateY(-50%);
       margin:0 auto;
       animation: blink 1s infinite;
-      font-family:Monomaniac One, sans-serif;
+      font-family:Gruppo, sans-serif;
+      text-transform: uppercase;
     }
 
     @keyframes blink {
