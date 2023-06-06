@@ -3782,6 +3782,7 @@ textarea.form-control-lg {
   color: var(--bs-navbar-brand-color);
   text-decoration: none;
   white-space: nowrap;
+  text-shadow: 1px 1px #000,3px 3px #444, 4px 4px rgba(252,255,98);
 }
 .navbar-brand:hover, .navbar-brand:focus {
   color: var(--bs-navbar-brand-hover-color);
@@ -10907,7 +10908,7 @@ html {
 }
 #mainNav .navbar-brand {
   color: #fff;
-  text-shadow: 1px 1px #000;
+  
 }
 #mainNav .navbar-nav {
   margin-top: 1rem;
